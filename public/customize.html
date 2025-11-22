@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customize Your Tesla</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar scrolled" id="navbar">
+    <a href="/" class="nav-logo">
+      <svg viewBox="0 0 342 35" xmlns="http://www.w3.org/2000/svg"><path d="M0 .1a9.7 9.7 0 007 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 007-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 006-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 00-8.7 7h39.9v-21h-31.2v-7zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7m0 13.8h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7m0 14.1h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7M308.5 7h26a9.6 9.6 0 007-7h-40a9.6 9.6 0 007 7" fill="currentColor"/></svg>
+    </a>
+    <div class="nav-links">
+      <a href="/cars">Vehicles</a>
+      <a href="/customize">Customize</a>
+      <a href="#">Energy</a>
+      <a href="#">Charging</a>
+    </div>
+    <div class="nav-auth" id="navAuth">
+      <a href="/login">Sign In</a>
+      <a href="/signup">Sign Up</a>
+    </div>
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/">Home</a>
+    <a href="/cars">Vehicles</a>
+    <a href="/customize">Customize</a>
+    <a href="#">Energy</a>
+    <a href="#">Charging</a>
+    <a href="/login">Sign In</a>
+    <a href="/signup">Sign Up</a>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Customize Page -->
+  <main class="customize-page">
+    <div class="customize-container">
+      <!-- Car Preview -->
+      <div class="car-preview">
+        <div class="preview-image" id="carPreview"></div>
+        <h2 id="carName">Model S</h2>
+        <div class="preview-specs">
+          <div class="spec-item">
+            <h4 id="specRange">396 mi</h4>
+            <p>Range (est.)</p>
+          </div>
+          <div class="spec-item">
+            <h4 id="specSpeed">1.99s</h4>
+            <p>0-60 mph</p>
+          </div>
+          <div class="spec-item">
+            <h4 id="specTop">200 mph</h4>
+            <p>Top Speed</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Customize Panel -->
+      <div class="customize-panel">
+        <h2>Design Your Tesla</h2>
+
+        <!-- Model Selector -->
+        <div class="model-selector">
+          <label for="modelSelect">Select Model</label>
+          <select id="modelSelect">
+            <option value="models">Model S - $74,990</option>
+            <option value="model3">Model 3 - $40,240</option>
+            <option value="modelx">Model X - $79,990</option>
+            <option value="modely">Model Y - $44,990</option>
+          </select>
+        </div>
+
+        <!-- Battery Options -->
+        <div class="option-group">
+          <h3>Battery & Range</h3>
+          <div class="battery-options" id="batteryOptions">
+            <div class="battery-option active" data-battery="standard" data-price="0">
+              <span>Standard Range</span>
+              <span class="price-add">Included</span>
+            </div>
+            <div class="battery-option" data-battery="long" data-price="10000">
+              <span>Long Range</span>
+              <span class="price-add">+$10,000</span>
+            </div>
+            <div class="battery-option" data-battery="plaid" data-price="20000">
+              <span>Plaid</span>
+              <span class="price-add">+$20,000</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Color Options -->
+        <div class="option-group">
+          <h3>Paint</h3>
+          <div class="color-options" id="colorOptions">
+            <div class="color-option active" data-color="white" data-price="0" style="background: #f5f5f5;" title="Pearl White Multi-Coat - Included"></div>
+            <div class="color-option" data-color="black" data-price="1500" style="background: #1a1a1a;" title="Solid Black - $1,500"></div>
+            <div class="color-option" data-color="blue" data-price="1500" style="background: #1e3a5f;" title="Deep Blue Metallic - $1,500"></div>
+            <div class="color-option" data-color="red" data-price="2500" style="background: #8b0000;" title="Ultra Red - $2,500"></div>
+            <div class="color-option" data-color="silver" data-price="1500" style="background: #c0c0c0;" title="Quicksilver - $1,500"></div>
+          </div>
+        </div>
+
+        <!-- Wheel Options -->
+        <div class="option-group">
+          <h3>Wheels</h3>
+          <div class="wheel-options" id="wheelOptions">
+            <div class="wheel-option active" data-wheel="19" data-price="0">
+              <span>19" Tempest</span>
+              <span class="price-add">Included</span>
+            </div>
+            <div class="wheel-option" data-wheel="21" data-price="4500">
+              <span>21" Arachnid</span>
+              <span class="price-add">+$4,500</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interior Options -->
+        <div class="option-group">
+          <h3>Interior</h3>
+          <div class="interior-options" id="interiorOptions">
+            <div class="interior-option active" data-interior="black" data-price="0">
+              <span>All Black</span>
+              <span class="price-add">Included</span>
+            </div>
+            <div class="interior-option" data-interior="white" data-price="2000">
+              <span>Black & White</span>
+              <span class="price-add">+$2,000</span>
+            </div>
+            <div class="interior-option" data-interior="cream" data-price="2000">
+              <span>Cream</span>
+              <span class="price-add">+$2,000</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Price Summary -->
+        <div class="price-summary">
+          <div class="price-row">
+            <span>Base Price</span>
+            <span id="basePrice">$74,990</span>
+          </div>
+          <div class="price-row">
+            <span>Battery</span>
+            <span id="batteryPrice">$0</span>
+          </div>
+          <div class="price-row">
+            <span>Paint</span>
+            <span id="colorPrice">$0</span>
+          </div>
+          <div class="price-row">
+            <span>Wheels</span>
+            <span id="wheelPrice">$0</span>
+          </div>
+          <div class="price-row">
+            <span>Interior</span>
+            <span id="interiorPrice">$0</span>
+          </div>
+          <div class="price-row total">
+            <span>Total Price</span>
+            <span id="totalPrice">$74,990</span>
+          </div>
+        </div>
+
+        <button class="order-btn" id="orderBtn">Order Now</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="#">Tesla © 2024</a>
+      <a href="#">Privacy & Legal</a>
+      <a href="#">Vehicle Recalls</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/customize.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicles | Tesla Clone</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar scrolled" id="navbar">
+    <a href="/" class="nav-logo">
+      <svg viewBox="0 0 342 35" xmlns="http://www.w3.org/2000/svg"><path d="M0 .1a9.7 9.7 0 007 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 007-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 006-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 00-8.7 7h39.9v-21h-31.2v-7zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7m0 13.8h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7m0 14.1h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7M308.5 7h26a9.6 9.6 0 007-7h-40a9.6 9.6 0 007 7" fill="currentColor"/></svg>
+    </a>
+    <div class="nav-links">
+      <a href="/cars">Vehicles</a>
+      <a href="/customize">Customize</a>
+      <a href="#">Energy</a>
+      <a href="#">Charging</a>
+    </div>
+    <div class="nav-auth" id="navAuth">
+      <a href="/login">Sign In</a>
+      <a href="/signup">Sign Up</a>
+    </div>
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/">Home</a>
+    <a href="/cars">Vehicles</a>
+    <a href="/customize">Customize</a>
+    <a href="#">Energy</a>
+    <a href="#">Charging</a>
+    <a href="/login">Sign In</a>
+    <a href="/signup">Sign Up</a>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Cars Page Content -->
+  <main class="cars-page">
+    <div class="cars-header">
+      <h1>Electric Vehicles</h1>
+    </div>
+
+    <div class="cars-grid">
+      <!-- Model S -->
+      <div class="car-card">
+        <div class="car-card-image" style="background-image: url('https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80');"></div>
+        <div class="car-card-content">
+          <h2>Model S</h2>
+          <p class="price">From $74,990</p>
+          <p class="specs">396 mi Range • 1.99s 0-60 mph • 200 mph Top Speed</p>
+          <div class="car-card-buttons">
+            <a href="/customize?model=models" class="btn-primary">Order Now</a>
+            <a href="#" class="btn-secondary">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Model 3 -->
+      <div class="car-card">
+        <div class="car-card-image" style="background-image: url('https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&q=80');"></div>
+        <div class="car-card-content">
+          <h2>Model 3</h2>
+          <p class="price">From $40,240</p>
+          <p class="specs">333 mi Range • 3.1s 0-60 mph • 162 mph Top Speed</p>
+          <div class="car-card-buttons">
+            <a href="/customize?model=model3" class="btn-primary">Order Now</a>
+            <a href="#" class="btn-secondary">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Model X -->
+      <div class="car-card">
+        <div class="car-card-image" style="background-image: url('https://images.unsplash.com/photo-1566055909643-a51b4271aa47?w=800&q=80');"></div>
+        <div class="car-card-content">
+          <h2>Model X</h2>
+          <p class="price">From $79,990</p>
+          <p class="specs">348 mi Range • 2.5s 0-60 mph • 163 mph Top Speed</p>
+          <div class="car-card-buttons">
+            <a href="/customize?model=modelx" class="btn-primary">Order Now</a>
+            <a href="#" class="btn-secondary">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Model Y -->
+      <div class="car-card">
+        <div class="car-card-image" style="background-image: url('https://images.unsplash.com/photo-1619317408603-96bb7ac5d7c0?w=800&q=80');"></div>
+        <div class="car-card-content">
+          <h2>Model Y</h2>
+          <p class="price">From $44,990</p>
+          <p class="specs">310 mi Range • 3.5s 0-60 mph • 155 mph Top Speed</p>
+          <div class="car-card-buttons">
+            <a href="/customize?model=modely" class="btn-primary">Order Now</a>
+            <a href="#" class="btn-secondary">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cybertruck -->
+      <div class="car-card">
+        <div class="car-card-image" style="background-image: url('https://images.unsplash.com/photo-1695048020516-7e78df6c6aa0?w=800&q=80');"></div>
+        <div class="car-card-content">
+          <h2>Cybertruck</h2>
+          <p class="price">From $79,990</p>
+          <p class="specs">340 mi Range • 2.6s 0-60 mph • 130 mph Top Speed</p>
+          <div class="car-card-buttons">
+            <a href="/customize?model=cybertruck" class="btn-primary">Order Now</a>
+            <a href="#" class="btn-secondary">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Roadster -->
+      <div class="car-card">
+        <div class="car-card-image" style="background-image: url('https://images.unsplash.com/photo-1620891549027-942fdc95d3f5?w=800&q=80');"></div>
+        <div class="car-card-content">
+          <h2>Roadster</h2>
+          <p class="price">From $200,000</p>
+          <p class="specs">620 mi Range • 1.9s 0-60 mph • 250+ mph Top Speed</p>
+          <div class="car-card-buttons">
+            <a href="/customize?model=roadster" class="btn-primary">Reserve Now</a>
+            <a href="#" class="btn-secondary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="#">Tesla © 2024</a>
+      <a href="#">Privacy & Legal</a>
+      <a href="#">Vehicle Recalls</a>
+      <a href="#">Contact</a>
+      <a href="#">News</a>
+      <a href="#">Get Updates</a>
+      <a href="#">Locations</a>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
