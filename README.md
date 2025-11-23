@@ -1,4 +1,3 @@
-cat > README.md << 'EOF'
 # Tesla Website Clone
 
 A full-stack Tesla website replication built with Node.js, Express and MongoDB
